@@ -5,7 +5,6 @@ readonly -A FILTERS=(
     ['abpvn.txt']='https://raw.githubusercontent.com/abpvn/abpvn/master/filter/abpvn.txt'
     ['abpvn-luxysiv.txt']='https://raw.githubusercontent.com/luxysiv/filters/main/abpvn-ext.txt'
     ['adguard-url-tracking.txt']='https://filters.adtidy.org/extension/ublock/filters/17_optimized.txt'
-    ['my-list.txt']='https://raw.githubusercontent.com/FiorenMas/My-adblock-list/main/my-list.txt'
 )
 
 function join_by { local IFS="$1"; shift; echo "$*"; }
