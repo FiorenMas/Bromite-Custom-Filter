@@ -27,20 +27,3 @@ jobs:
           default_author: user_info
           message: 'Update filters: ${{ env.DATE }}'
           push: true
-
-      - name: Release filter lists
-        uses: softprops/action-gh-release@v1
-        with:
-          files: filters.dat
-          name: Filterlist ${{ env.DATE }}
-          tag_name: ${{ env.DATE }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Delete older releases
-        uses: dev-drprasad/delete-older-releases@v0.2.0
-        with:
-          keep_latest: 1
-          delete_tags: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
